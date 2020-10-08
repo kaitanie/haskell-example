@@ -1,0 +1,16 @@
+* Simple Nix, Haskell & Ghcide example
+
+This project uses Niv (https://hackage.haskell.org/package/niv) for
+managing the Nix depdendencies. The Nixpkgs and Niv snapshots used can
+be updated using `niv update` command in the Nix shell.
+
+For the sake of having a non-trivial example this project uses Gtk
+from Haskell to demonstrate the usage of things that depend on
+non-Haskell stuff.
+
+** Usage:
+
+0. `nix-shell` downloads dependencies, GHC and ghcide IDE backend
+   which can be used from editor that has been configured to use ghcide.
+1. `cabal new-build` compiles the project
+2. `cabal new-run` runs the program, opens a window with "Hello world" button.
